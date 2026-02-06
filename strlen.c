@@ -21,7 +21,6 @@ size_t my_strlen(const char *string) {
     const size_t *w = (size_t *)string;
 
     while(1) {
-
         size_t value = *w;
         if(((value - 0x0101010101010101ULL) & ~value & 0x8080808080808080ULL) != 0) {
             break;
@@ -33,6 +32,6 @@ size_t my_strlen(const char *string) {
     while(*c != '\0') {
         ++c;
     }
-
+    
     return (size_t)(c - start);
 }
