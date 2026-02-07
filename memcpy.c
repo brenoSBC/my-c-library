@@ -42,7 +42,7 @@ void *my_memcpy(void *dest, const void *src, size_t n)
 
                 0 : read access (operation is read, not written)
 
-                3 : high temporal locality; keep data in cache as long as possible
+                3 : high temporal locality, keep data in cache as long as possible
             */
             __builtin_prefetch(psrc + PREFETCH_DISTANCE, 0, 3);
 
