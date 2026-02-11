@@ -8,7 +8,7 @@ int my_memcmp(const void *s1, const void *s2, size_t n) {
 
     while(n != 0) {
         if(*ps1 != *ps2) {
-            return ps1 - ps2;
+            return *ps1 - *ps2;
         }
         ++ps1;
         ++ps2;
